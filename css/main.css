@@ -1,0 +1,415 @@
+
+/* global */
+.head-cap h4{
+    font-size: 18px;
+}
+.head-cap h2{
+    position: relative;
+}
+.head-cap h2::before{
+    content: "C";
+    position: absolute;
+    color: rgba(0, 0, 0, 0.1);
+    font-size: 80px;
+    left: 50%;
+    
+    bottom: -10px;
+    transform: translateX(-50%);
+    
+}
+
+/* navbar */
+
+
+/* header */
+header{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+header .head-img-1{
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../pics/bg-image-28.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+header .head-img-2{
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../pics/bg-image-29.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header .head-img-1 h1 , header .head-img-2 h1{
+    font-size: 100px;
+    animation-name: poping;
+    animation-duration: 1.2s;
+}
+header .head-img-1 p , header .head-img-2 p{
+    font-size: 18px;
+    animation-name: poping;
+    animation-duration: 2.4s;
+    
+}
+
+header .head-btn button{
+    width: 130px;
+    padding-block: 10px;
+    margin: 5px;
+    animation-name: poping;
+    animation-duration: 3.6s;
+    animation-direction: alternate;
+}
+
+header .carousel-control-prev,
+header .carousel-control-next{
+    width: 60px;
+    height: 40px;
+    border: 3px solid white; 
+    
+}
+header .carousel-control-next{
+    left: 0;
+    top: 50%;
+}
+header .carousel-control-prev{
+    left: 0;
+    top: 55%;
+}
+
+/* who we are */
+.who-we-are .who-caption{
+    max-width: 650px;
+    
+}
+
+.who-we-are span::after {
+    content: "|";
+    animation: typing;
+    animation-duration: 10s;
+    
+    animation-iteration-count: infinite;
+    
+}
+.who-we-are button{
+    width: 120px;
+    padding-block:10px ;
+    border-radius: 0;
+    border-color: rgba(0,0,0,0.2) ;
+}
+/* creative team */
+.inner-item {
+    position: relative;
+    overflow-y: hidden;
+    
+}
+.card-info {
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: rgba(0, 195, 218, 0.9);
+}
+
+.inner-item:hover .card-info {
+    opacity: 1;
+    transform: translatey(0);
+    
+    
+}
+.team-caption{
+    bottom: 5px;
+    left: 10px;
+    position: absolute;
+}
+.team-icons {
+    top: 15px;
+    left: 10px;
+    position: absolute;
+}
+
+/* what can we do  */
+.what-we-do{
+    background-color: #1f1f1fac;
+}
+.what-we-do h5{
+    font-size: 16px;
+}
+.what-we-do h2{
+    font-size: 32px;
+}
+.what-we-do .wwe-text{
+    max-width: 400px;
+}
+.what-we-do .WWE-after{
+    position: relative;
+}
+.what-we-do .WWE-after::before{
+    content: "W";
+    font-size: 60px;
+    position: absolute;
+    top: -20%;
+    left: 0;
+    bottom: 0;
+    font-weight: bold;
+
+    color:  rgba(255, 255, 255, 0.1);
+}
+/* cheap price */
+.cheap-price .top-card{
+    font-weight:500 ;
+}
+.card-special{
+    position: relative;
+    scale: 1.07;
+}
+.card-special .best-price{
+    font-size: 12px;
+    width: 80px;
+    border-radius:5px ;
+    position: absolute;
+    top: 65px;
+    right: 50px;
+    height: 20px;
+}
+/* happy customers */
+.customers{
+    background-color: #1f1f1fac;
+}
+.carousel-item  {
+    position: relative;
+}
+.carousel-item img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* .carousel-item .carousel-caption{
+    
+}  */
+.customers .carousel-control-prev,
+.customers .carousel-control-next{
+    color: #1f1f1f; 
+}
+.carousel-content {
+    width: 50%;
+    margin: auto;
+}
+.carousel-content .for-flex p{
+    max-width: 500px;
+    
+}
+.customers .cars-btn {
+    width: 10px;
+    height: 10px;
+    /* border: 1  ; */
+    border-radius: 50%;
+    background-color: rgb(0, 195, 218);
+    color: rgb(0, 195, 218);
+}
+/* final */
+.final .WWE-after{
+    position: relative;
+}
+.final .WWE-after::before{
+    content: "G";
+    font-size: 60px;
+    position: absolute;
+    top: -20%;
+    left: 0;
+    bottom: 0;
+    font-weight: bold;
+
+    color:  rgba(0, 0, 0, 0.1);
+}
+.final .final-btn{
+    width: 150px;
+    padding: 10px;
+}
+
+@keyframes poping{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes typing {
+    0%{
+        content: '|';
+    }
+    1%{
+        content: 'A|';
+    }
+    2%{
+        content: 'Ap|';
+    }
+    3%{
+        content: 'App|';
+    }
+    4%{
+        content: 'Apps|';
+    }
+    5%{
+        content: 'Apps|';
+    }
+    6%{
+        content: 'Apps|';
+    }
+    7%{
+        content: 'Apps|';
+    }
+    8%{
+        content: 'App|';
+    }
+    9%{
+        content: 'Ap|';
+    }
+    10%{
+        content: 'A|';
+    }
+    11%{
+        content: '|';
+    }
+    12%{
+        content: 'W|';
+    }
+    13%{
+        content: 'We|';
+    }
+    14%{
+        content: 'Web|';
+    }
+    15%{
+        content: 'Webs|';
+    }
+    16%{
+        content: 'Websi|';
+    }
+    17%{
+        content: 'Websit|';
+    }
+    18%{
+        content: 'Website|';
+    }
+    19%{
+        content: 'Websites|';
+    }
+    20%{
+        content: 'Websites|';
+    }
+    21%{
+        content: 'Websites|';
+    }
+    22%{
+        content: 'Websites|';
+    }
+    23%{
+        content: 'Website|';
+    }
+    24%{
+        content: 'Websit|';
+    }
+    25%{
+        content: 'Websi|';
+    }
+    26%{
+        content: 'Webs|';
+    }
+    27%{
+        content: 'Web|';
+    }
+    28%{
+        content: 'We|';
+    }
+    29%{
+        content: 'W|';
+    }
+    30%{
+        content: '|';
+    }
+    31%{
+        content: 'S|';
+    }
+    32%{
+        content: 'So|';
+    }
+    33%{
+        content: 'Sof|';
+    }
+    34%{
+        content: 'Soft|';
+    }
+    35%{
+        content: 'Softw|';
+    }
+    36%{
+        content: 'Softwa|';
+    }
+    37%{
+        content: 'Softwar|';
+    }
+    38%{
+        content: 'Software|';
+    }
+    39%{
+        content: 'Softwares|';
+    }
+    40%{
+        content: 'Softwares|';
+    }
+    41%{
+        content: 'Softwares|';
+    }
+    42%{
+        content: 'Softwares|';
+    }
+    43%{
+        content: 'Softwares|';
+    }
+    44%{
+        content: 'Software|';
+    }
+    45%{
+        content: 'Softwar|';
+    }
+    46%{
+        content: 'Softwa|';
+    }
+    47%{
+        content: 'Softw|';
+    }
+    48%{
+        content: 'Soft|';
+    }
+    49%{
+        content: 'Sof|';
+    }
+    50%{
+        content: 'So|';
+    }
+    51%{
+        content: 'S|';
+    }
+    52%{
+        content: '|';
+    }
+}
